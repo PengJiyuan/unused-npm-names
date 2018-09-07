@@ -13,7 +13,11 @@ function search(pkgs = []) {
         console.log(`${chalk.cyan(pkg)}: ${chalk.red('Used ❌')}`);
       })
       .catch((err) => {
-        console.log(`${chalk.cyan(pkg)}: ${chalk.green('Unused ✅')}`);
+        if (err.stack && /Request failed with status code 404/.test(err.stack)) {
+          console.log(`${chalk.cyan(pkg)}: ${chalk.green('Unused ✅')}`);
+        } else {
+          console.log(`${chalk.cyan(pkg)}: ${chalk.gray('Unknown 🤔')}`)
+        }
       });
   });
 }
