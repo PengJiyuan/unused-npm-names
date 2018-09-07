@@ -1,6 +1,6 @@
 {
   "name": "unused-npm-names",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find unused npm names",
   "main": "index.js",
   "bin": {
