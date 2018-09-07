@@ -12,10 +12,10 @@ npm i unused-npm-names -g
 $ unn react react-dom react-router fdsagdainfkdsaj
 
 # output
-fdsagdainfkdsaj: Unused!
-react-dom: Used!
-react: Used!
-react-router: Used!
+fdsagdainfkdsaj: Unused ✅
+react-dom: Used ❌
+react-router: Used ❌
+react: Used ❌
 ```
 
 ## LICENSE

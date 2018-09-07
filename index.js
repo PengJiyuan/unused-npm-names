@@ -6,13 +6,14 @@ function search(pkgs = []) {
     throw 'Param should be an array.';
   }
 
+  console.log();
   pkgs.forEach((pkg) => {
     axios.get(`https://registry.npmjs.org/${pkg}`)
       .then((res) => {
-        console.log(`${chalk.cyan(pkg)}: ${chalk.red('Used!')}`);
+        console.log(`${chalk.cyan(pkg)}: ${chalk.red('Used ❌')}`);
       })
       .catch((err) => {
-        console.log(`${chalk.cyan(pkg)}: ${chalk.green('Unused!')}`);
+        console.log(`${chalk.cyan(pkg)}: ${chalk.green('Unused ✅')}`);
       });
   });
 }
